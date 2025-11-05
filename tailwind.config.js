@@ -108,6 +108,20 @@ module.exports = {
           "0%": { transform: "scale(1)", opacity: "1" },
           "100%": { transform: "scale(1.3)", opacity: "0" },
         },
+        "gradient": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "gold-pulse": {
+          "0%, 100%": {
+            color: "#C69214",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(198, 146, 20, 0.6)"
+          },
+          "50%": {
+            color: "#FFD700",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.8)"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -116,6 +130,8 @@ module.exports = {
         "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
         "bounce-gentle": "bounce-gentle 2s infinite",
         "pulse-ring": "pulse-ring 2s infinite",
+        "gradient": "gradient 3s ease infinite",
+        "gold-pulse": "gold-pulse 3s ease-in-out infinite",
       },
     },
   },
