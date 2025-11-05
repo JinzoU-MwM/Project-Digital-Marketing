@@ -1,12 +1,30 @@
 export const COMPANY_INFO = {
-  name: 'PT Jaminan Solusi Bisnis',
-  shortName: 'Jaminan Solusi',
-  tagline: 'Solusi Lengkap untuk Izin Travel dan Layanan Bisnis',
-  description: 'Pendampingan tenaga ahli berpengalaman untuk izin PPIU, PIHK, Akreditasi, IATA, serta layanan administrasi bisnis',
-  phone: '+62 812-3456-7890',
-  email: 'info@ptjaminansolusibisnis.com',
-  address: 'Jl. Contoh Alamat No. 123, Jakarta Pusat, DKI Jakarta 10110',
-  whatsapp: '6281234567890',
+  name: 'PT Jaminan Nasional Indonesia',
+  shortName: 'JNI',
+  tagline: 'Jaminan Kepastian Bisnis Anda',
+  description: 'Solusi terpercaya izin travel dan layanan bisnis sejak 2018',
+  founded: '2018',
+  website: 'https://jamnasindo.id',
+  email: {
+    general: 'jamnasindo.info@gmail.com',
+    admin: 'admin@jamnasindo.id'
+  },
+  phone: '089620055378',
+  whatsapp: '6289620055378',
+  address: {
+    street: 'Jl. Condet Raya No 103E',
+    area: 'Condet, Kramatjati',
+    city: 'Jakarta Timur',
+    province: 'DKI Jakarta',
+    postalCode: '13530',
+    country: 'Indonesia',
+    full: 'Jl. Condet Raya No 103E, Condet, Kramatjati, Jakarta Timur, DKI Jakarta 13530',
+    mapsLink: 'https://maps.google.com/?q=Jl+Condet+Raya+No+103E+Condet+Kramatjati+Jakarta+Timur'
+  },
+  hours: {
+    display: 'Senin - Jumat: 09:00 - 17:00 WIB',
+    detail: 'Senin - Jumat: 09:00 - 17:00 WIB\nSabtu - Minggu: Tutup'
+  },
   experience: '6+',
   clients: '500+',
   projects: '1000+',
@@ -160,7 +178,7 @@ export const NAVIGATION = {
     { title: 'Blog', href: '/blog' },
     { title: 'Portofolio', href: '/portfolio' },
     { title: 'Testimoni', href: '#testimonials' },
-    { title: 'FAQ', href: '#faq' },
+    { title: 'FAQ', href: '/faq' },
     { title: 'Kontak', href: '#cta' }
   ],
   social: [
@@ -178,70 +196,21 @@ export const NAVIGATION = {
 
 export const CONTACT_INFO = {
   whatsapp: {
-    display: '+62 812-3456-7890',
+    display: '+62 896-2005-5378',
     link: `https://wa.me/${COMPANY_INFO.whatsapp}`,
-    message: 'Halo, saya tertarik dengan layanan PT Jaminan Solusi Bisnis'
+    message: 'Halo, saya tertarik dengan layanan PT Jaminan Nasional Indonesia'
   },
   email: {
-    display: 'info@ptjaminansolusibisnis.com',
-    link: 'mailto:info@ptjaminansolusibisnis.com'
+    display: COMPANY_INFO.email.general,
+    link: `mailto:${COMPANY_INFO.email.general}`
   },
   address: {
-    display: COMPANY_INFO.address,
-    mapsLink: '#'
+    display: COMPANY_INFO.address.full,
+    mapsLink: COMPANY_INFO.address.mapsLink
   },
-  hours: {
-    display: 'Senin - Jumat: 09:00 - 17:00 WIB',
-    detail: 'Senin - Jumat: 09:00 - 17:00 WIB\nSabtu - Minggu: Tutup'
-  }
+  hours: COMPANY_INFO.hours
 }
 
-export const FAQ_DATA = {
-  travel: [
-    {
-      question: 'Apa saja syarat utama untuk mengajukan izin PPIU?',
-      answer: 'Syarat utama PPIU meliputi: Badan hukum PT, NIB, NPWP, memiliki minimal 2 orang SDM bersertifikat Bimbingan Ibadah Umrah, rekening bank atas nama perusahaan, akta pendirian dan perubahan (jika ada), surat keterangan domisili, dan bukti kepemilikan kantor.',
-      category: 'ppiu'
-    },
-    {
-      question: 'Berapa lama proses pengurusan izin PPIU sampai terbit?',
-      answer: 'Proses normal PPIU memakan waktu 60-90 hari. Namun dengan pendampingan kami, proses dapat lebih cepat karena dokumen sudah dipersiapkan dengan baik dan sesuai standar Kemenag.',
-      category: 'ppiu'
-    },
-    {
-      question: 'Apakah perusahaan saya sudah siap untuk mengajukan PIHK?',
-      answer: 'Persyaratan PIHK lebih ketat dari PPIU. Perusahaan harus memiliki pengalaman menyelenggarakan umrah minimal 2 tahun, memiliki minimal 100 jamaah per tahun, dan modal yang lebih besar. Kami dapat melakukan assessment kesiapan perusahaan Anda.',
-      category: 'pihk'
-    },
-    {
-      question: 'Kapan akreditasi PPIU harus diperpanjang?',
-      answer: 'Akreditasi PPIU harus diperpanjang setiap 3 tahun. Proses perpanjangan sebaiknya dimulai 6 bulan sebelum masa berlaku berakhir untuk menghindari gangguan operasional.',
-      category: 'akreditasi'
-    },
-    {
-      question: 'Apa manfaat memiliki keanggotaan IATA untuk travel agent?',
-      answer: 'Keanggotaan IATA memberikan akses ke lebih dari 290 maskapai penerbangan, sistem Billing and Settlement Plan (BSP), credibility enhancement, dan kemudahan dalam issuing tiket langsung.',
-      category: 'iata'
-    }
-  ],
-  business: [
-    {
-      question: 'Dokumen apa saja yang diperlukan untuk pengajuan bank garansi?',
-      answer: 'Dokumen umum: Akta perusahaan, NIB, NPWP, SPT tahunan 2 tahun terakhir, laporan keuangan 3 bulan terakhir, dokumen proyek (kontrak), dan identitas direksi/komisaris.',
-      category: 'bank-garansi'
-    },
-    {
-      question: 'Berapa frekuensi pembukuan yang disarankan untuk perusahaan kecil?',
-      answer: 'Untuk perusahaan kecil, disarankan pembukuan bulanan untuk memastikan semua transaksi tercatat dengan baik dan memudahkan pelaporan SPT masa. Pembukuan harian lebih baik jika volume transaksi tinggi.',
-      category: 'laporan-keuangan'
-    },
-    {
-      question: 'Kapan waktu terbaik melakukan tax planning?',
-      answer: 'Tax planning sebaiknya dilakukan di awal tahun fiskal atau sebelum melakukan transaksi besar. Ini memberikan kesempatan untuk strukturisasi yang optimal dan menghindari pajak yang tidak perlu.',
-      category: 'pajak'
-    }
-  ]
-}
 
 export const TESTIMONIALS = [
   {
@@ -263,7 +232,7 @@ export const TESTIMONIALS = [
     avatar: '/avatars/testimonial-2.jpg',
     rating: 5,
     service: 'PIHK',
-    content: 'Alhamdulillah, dengan bantuan PT Jaminan Solusi Bisnis, izin PIHK kami disetujui. Proses yang rumit menjadi mudah dengan pendampingan yang baik.',
+    content: 'Alhamdulillah, dengan bantuan PT Jaminan Nasional Indonesia, izin PIHK kami disetujui. Proses yang rumit menjadi mudah dengan pendampingan yang baik.',
     date: '2024-09-20'
   },
   {

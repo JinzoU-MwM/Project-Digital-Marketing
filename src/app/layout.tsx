@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
-import './styles/jni-brand.css'
 import Script from 'next/script'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
 import { LoadingProvider } from '@/contexts/loading-context'
