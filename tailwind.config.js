@@ -52,22 +52,36 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
-          800: "#1e40af",
-          900: "#1e3a8a",
-        },
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+          // JNI Brand Colors
+          green: '#167238',
+          deep: '#006F32',
+          emerald: '#077337',
+          forest: '#156C36',
+          leaf: '#167133',
+          gold: '#C69214'
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        inter: ['var(--font-inter)', 'sans-serif']
+      },
+      backdropBlur: {
+        xs: '2px',
       },
       keyframes: {
         "accordion-down": {

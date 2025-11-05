@@ -1,0 +1,42 @@
+/* src/styles/jni-brand.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* JNI Brand Colors */
+  --jni-green: #167238;
+  --jni-green-deep: #006F32;
+  --jni-emerald: #077337;
+  --jni-forest: #156C36;
+  --jni-leaf: #167133;
+  --jni-gold: #C69214;
+
+  /* Neutrals */
+  --jni-black: #111827;
+  --jni-gray-700: #374151;
+  --jni-gray-400: #9CA3AF;
+  --jni-gray-200: #E5E7EB;
+  --jni-white: #FFFFFF;
+}
+
+/* Glass Morphism Base Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(22, 114, 56, 0.2);
+  border-radius: 16px;
+}
+
+.glass-button {
+  background: linear-gradient(135deg,
+    rgba(22, 114, 56, 0.9),
+    rgba(7, 115, 55, 0.8)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(198, 146, 20, 0.3);
+}
+
+/* Typography Classes */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }

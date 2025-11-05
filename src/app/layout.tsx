@@ -1,18 +1,31 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import './styles/jni-brand.css'
 import Script from 'next/script'
-import { ErrorBoundary } from '@/components/ui/error-boundary'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
+import { LoadingProvider } from '@/contexts/loading-context'
+import { LoadingOverlay } from '@/components/ui/loading-overlay'
+import { PageTransition } from '@/components/ui/page-transition'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700']
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700']
+})
 
 export const metadata: Metadata = {
   title: {
-    default: 'PT Jaminan Solusi Bisnis - Solusi Lengkap Izin Travel dan Layanan Bisnis',
-    template: '%s | PT Jaminan Solusi Bisnis'
+    default: 'PT Jaminan Nasional Indonesia - Jaminan Kepastian Bisnis Anda',
+    template: '%s | PT Jaminan Nasional Indonesia'
   },
-  description: 'Pendampingan tenaga ahli berpengalaman untuk izin PPIU, PIHK, Akreditasi, IATA, serta layanan administrasi bisnis seperti pajak, bank garansi, dan laporan keuangan. 500+ client puas, 6+ tahun pengalaman.',
+  description: 'Solusi terpercaya izin PPIU, PIHK, Akreditasi IATA, dan layanan administrasi bisnis. Pendampingan profesional sejak 2018. Kantor Jakarta Timur. Hubungi: 089620055378',
   keywords: [
     'PPIU',
     'PIHK',
@@ -84,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="id">
+    <html lang="id" data-scroll-behavior="smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -95,11 +108,14 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={inter.className}>
-        <ErrorBoundary>
-          {children}
-        </ErrorBoundary>
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+      <body className={inter.className} suppressHydrationWarning>
+        <LoadingProvider>
+          <PageTransition>
+            {children}
+          </PageTransition>
+          <LoadingOverlay />
+          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+        </LoadingProvider>
       </body>
     </html>
   )
