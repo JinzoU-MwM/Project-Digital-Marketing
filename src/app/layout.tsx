@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     'Bank Garansi',
     'Laporan Keuangan',
     'Administrasi Kontraktor',
-    'PT Jaminan Solusi Bisnis'
+    'PT Jaminan Nasional Indonesia'
   ],
-  authors: [{ name: 'PT Jaminan Solusi Bisnis' }],
-  creator: 'PT Jaminan Solusi Bisnis',
-  publisher: 'PT Jaminan Solusi Bisnis',
+  authors: [{ name: 'PT Jaminan Nasional Indonesia' }],
+  creator: 'PT Jaminan Nasional Indonesia',
+  publisher: 'PT Jaminan Nasional Indonesia',
   formatDetection: {
     email: false,
     address: false,
@@ -56,21 +56,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: '/',
-    siteName: 'PT Jaminan Solusi Bisnis',
-    title: 'PT Jaminan Solusi Bisnis - Solusi Lengkap Izin Travel dan Layanan Bisnis',
+    siteName: 'PT Jaminan Nasional Indonesia',
+    title: 'PT Jaminan Nasional Indonesia - Solusi Lengkap Izin Travel dan Layanan Bisnis',
     description: 'Pendampingan tenaga ahli berpengalaman untuk izin PPIU, PIHK, Akreditasi, IATA, serta layanan administrasi bisnis. 500+ client puas.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'PT Jaminan Solusi Bisnis',
+        alt: 'PT Jaminan Nasional Indonesia',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PT Jaminan Solusi Bisnis - Solusi Lengkap Izin Travel dan Layanan Bisnis',
+    title: 'PT Jaminan Nasional Indonesia - Solusi Lengkap Izin Travel dan Layanan Bisnis',
     description: 'Pendampingan tenaga ahli berpengalaman untuk izin PPIU, PIHK, Akreditasi, IATA, serta layanan administrasi bisnis.',
     images: ['/images/og-image.jpg'],
   },
